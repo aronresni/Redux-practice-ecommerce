@@ -1,16 +1,20 @@
-//CREAMOS 3 ACCIONES DE LAS ACTION TYPES
-import { Provider } from "react-redux"
-import { ActionTypes } from "../contants/action-types"
+import { ActionTypes } from "../contants/actionTypes";
+
 export const setProducts = (products) => {
     return {
-        type: ActionTypes.SET_PRODUCT,
+        type: ActionTypes.SET_PRODUCTS,
         payload: products,
-    }
-}
+    };
+};
 
-export const selectedProducts = (product) => {
+export const selectedProduct = (product) => {
     return {
         type: ActionTypes.SELECTED_PRODUCT,
         payload: product,
-    }
-}
+    };
+};
+export const removeSelectedProduct = () => {
+    return {
+        type: ActionTypes.REMOVE_SELECTED_PRODUCT,
+    };
+};
